@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Abarrotes Michi-Gan</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #eef1f5;
+}
+
+/* PANTALLA INICIO NUEVA */
+#inicio {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+background: url('https://images.unsplash.com/photo-1506619216599-9d16d0903dfd') center/cover no-repeat;
+     center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#inicio h1 {
+    color: white;
+    font-size: 60px;
+    background: rgba(0,0,0,0.4);
+    padding: 20px 50px;
+    border-radius: 20px;
+    letter-spacing: 4px;
+}
+
+/* HEADER */
+header {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* NAV */
+nav {
+    background: #111827;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+/* CONTENIDO */
+.container {
+    padding: 20px;
+}
+
+/* PRODUCTOS */
+.producto {
+    background: white;
+    width: 210px;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.producto img {
+    width: 100%;
+    height: 140px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* BOTONES */
+button {
+    background: #1f2937;
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* CARRITO */
+#carrito {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- INICIO -->
+<div id="inicio">
+    <h1>Bienvenidos</h1>
+</div>
+
+<header>
+<h1>Abarrotes Michi-Gan</h1>
+<p class="descripcion">
+Tu tienda de confianza con productos frescos, calidad y precios accesibles para tu hogar.
+</p>
+</header>
+       
+
+
+<nav>
+<a href="#frutas">Frutas</a>
+<a href="#verduras">Verduras</a>
+<a href="#bebidas">Bebidas</a>
+<a href="#snacks">Snacks</a>
+<a href="#Higiene">Higiene</a>
+<a href="#limpieza">Limpieza</a>
+<a href="#carrito">Carrito</a>
+</nav>
+
+<div class="container">
+
+<!-- FRUTAS -->
+<h2 id="frutas">🍎 Frutas</h2>
+
+<div class="producto">
+<img src="https://tse4.mm.bing.net/th/id/OIP.ualXIWLU852pujbgUoWFqgHaFQ?pid=Api&P=0&h=180">
+<h3>Mango</h3><p>$40</p>
+<button onclick="agregar('Mango',40)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://tse2.mm.bing.net/th/id/OIP.l2uxSl2btPh7mpplfTSgjAHaFy?pid=Api&P=0&h=180">
+<h3>Piña</h3><p>$35</p>
+<button onclick="agregar('Piña',35)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://tse3.mm.bing.net/th/id/OIP.4D8QS01y0QvQxmvpSDilTQHaFy?pid=Api&P=0&h=180">
+<h3>Manzana</h3><p>$30</p>
+<button onclick="agregar('Manzana',30)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://tse1.mm.bing.net/th/id/OIP.scCRf6OYi75g8gjIzWXVogHaHa?pid=Api&P=0&h=180">
+<h3>Fresas</h3><p>$60</p>
+<button onclick="agregar('Fresas',60)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://tse2.mm.bing.net/th/id/OIP.TJZC2Uqwo7r4mPsU4jgphAHaE8?pid=Api&P=0&h=180">
+<h3>Sandia</h3><p>$35</p>
+<button onclick="agregar('Sandia',35)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://tse3.mm.bing.net/th/id/OIP.SWsVZhcpRhPUqJzFozUpugHaE8?pid=Api&P=0&h=180">
+<h3>Platano</h3><p>$25</p>
+<button onclick="agregar('Platano',25)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.6cUH1JEBP7zpD0KC1KONQwHaFI?w=233&h=180&c=7&r=0&o=5&pid=1.7">
+<h3>Uvas</h3><p>$60</p>
+<button onclick="agregar('Uvas',60)">Agregar</button>
+</div>
+
+<!-- VERDURAS -->
+<h2 id="verduras">🍅 Verduras</h2>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.1KMvfO0VGFP_h9bX8JmBzAHaFP?w=293&h=200&c=7&r=0&o=7&pid=1.7&rm=3">
+<h3>Tomate</h3><p>$45</p>
+<button onclick="agregar('Tomate',45)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.5alSC7VRJYStU4oBPV1drQHaFK?w=254&h=180&c=7&r=0&o=5&pid=1.7">
+<h3>Papa</h3><p>$30</p>
+<button onclick="agregar('Papa',30)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.Kb5idNEv6Ti6ViVtlPTJNQAAAA?w=143&h=150&c=7&r=0&o=5&pid=1.7">
+<h3>Cebolla</h3><p>$25</p>
+<button onclick="agregar('Cebolla',25)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.sYpsi0wVOw7huWo--aW8ZgHaHa?w=170&h=180&c=7&r=0&o=5&pid=1.7">
+<h3>Zanahoria</h3><p>$20</p>
+<button onclick="agregar('Zanahoria',20)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.Ys3tlmul-pPw52B52eEgHwHaHa?w=186&h=186&c=7&r=0&o=5&pid=1.7">
+<h3>Brócoli</h3><p>$65</p>
+<button onclick="agregar('Brócoli',65)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.SayI1rAPyOxWkvDa99pKwwHaHa?w=159&h=180&c=7&r=0&o=5&pid=1.7">
+<h3>Lechuga</h3><p>$30</p>
+<button onclick="agregar('Lechuga',30)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.39DcJGevaCiKWGHRLnPigAHaHB?w=213&h=203&c=7&r=0&o=5&pid=1.7">
+<h3>Pepino</h3><p>$25</p>
+<button onclick="agregar('Pepino',25)">Agregar</button>
+</div>
+
+<!-- BEBIDAS -->
+<h2 id="bebidas">🥤 Bebidas</h2>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.CqXwf70aAhy00bD7qsuvXQHaKh?w=119&h=180&c=7&r=0&o=5&pid=1.7">
+<h3>Agua</h3><p>$15</p>
+<button onclick="agregar('Agua',15)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://thf.bing.com/th/id/OIP.riUKE5Qwm-s3a0PHDW_uiAHaHa?w=192&h=192&c=7&r=0&o=7&cb=thfc1&pid=1.7&rm=3">
+<h3>Leche Yaqui</h3><p>$30</p>
+<button onclick="agregar('Leche Yaqui',30)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.taWsz37Eyq-Piqf-kNXSIAHaHa?w=191&h=180&c=7&r=0&o=5&pid=1.7">
+<h3>Jumex</h3><p>$25</p>
+<button onclick="agregar('Jumex',25)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://tse1.mm.bing.net/th/id/OIP.tKQX9UnJmLoRZ0Ht-CuuQAHaHa?pid=Api&P=0&h=180">
+<h3>Coca Cola</h3><p>$25</p>
+<button onclick="agregar('Coca Cola',25)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://tse1.mm.bing.net/th/id/OIP.Oyu7z6KMkiFHRJYnD7ZMhgHaHa?pid=Api&P=0&h=180">
+<h3>Monster Energy</h3><p>$40</p>
+<button onclick="agregar('Monster Energy',40)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://tse1.mm.bing.net/th/id/OIP.w7MIVW9sYnjX0O31IOvZjgHaHa?pid=Api&P=0&h=180">
+<h3>Power Ade</h3><p>$30</p>
+<button onclick="agregar('Power Ade',30)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://tse1.mm.bing.net/th/id/OIP.xEMluV8ZFOn6-44emItaHAHaHa?pid=Api&P=0&h=180">
+<h3>Pepsi</h3><p>$20</p>
+<button onclick="agregar('Pepsi',20)">Agregar</button>
+</div>
+
+<!-- SNACKS -->
+<h2 id="snacks">🍪 Snacks</h2>
+
+<div class="producto">
+<img src="https://tse2.mm.bing.net/th/id/OIP.ZEj3hZqSagXkxqJEwEExBgHaHa?pid=Api&P=0&h=180">
+<h3>Sabritas</h3><p>$25</p>
+<button onclick="agregar('Sabritas',25)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://tse1.mm.bing.net/th/id/OIP.TrzQSaQSMnowr3TBFd2J0wHaHa?pid=Api&P=0&h=180">
+<h3>Chokis</h3><p>$15</p>
+<button onclick="agregar('Chokis',15)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://tse1.mm.bing.net/th/id/OIP.Z1zK-vGJ_QP6vBsRSu6drwHaE0?pid=Api&P=0&h=180">
+<h3>Snickers</h3><p>$25</p>
+<button onclick="agregar('Snickers',25)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.Vinieg3DJmtgG6M76CGLuQHaHa?w=186&h=186&c=7&r=0&o=7&pid=1.7&rm=3">
+<h3>Cheetos Xtra Flamin Hot</h3><p>$20</p>
+<button onclick="agregar('Cheetos Xtra Flamin Hot',20)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.oPQicAiOgyi3tb3jCDEEUQHaHa?w=196&h=196&c=7&r=0&o=5&pid=1.7">
+<h3>Principe</h3><p>$27</p>
+<button onclick="agregar('Principe',27)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th?q=Chocolates+Marca+M&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&pid=InlineBlock&rm=3&mkt=es-MX&cc=MX&setlang=es&adlt=moderate&t=1&mw=247">
+<h3>mym's</h3><p>$40</p>
+<button onclick="agregar('mym's',40)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.SHa6CrGeweOsGxvtU2zCtQHaHa?w=162&h=180&c=7&r=0&o=7&pid=1.7&rm=3">
+<h3>Panditas</h3><p>$35</p>
+<button onclick="agregar('Panditas',35)">Agregar</button>
+</div>
+
+<!-- HIGIENE -->
+<h2 id="higiene">🧼 Higiene</h2>
+
+<div class="producto">
+<img src="https://tse3.mm.bing.net/th/id/OIP.hiOqjJMWY-c-we0TAJCP0QHaHa?pid=Api&P=0&h=180">
+<h3> Shampoo Herbal Essences</h3><p>$85</p>
+<button onclick="agregar('Shampoo Herbal Essences',85)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.C4SOSxzG5Er7uaaYPJrgIQHaHa?w=186&h=186&c=7&r=0&o=5&pid=1.7">
+<h3>Dove</h3><p>$45</p>
+<button onclick="agregar('Dove',45)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.6akHczYtZvATyiDP6KmvHwHaHa?w=186&h=186&c=7&r=0&o=5&pid=1.7">
+<h3>Acondiccionador Herbal Essences</h3><p>$85</p>
+<button onclick="agregar('Acondiccionador Herbal Essences',85)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.HYE1JbsCCe9eG34pZClPpQHaHa?w=204&h=204&c=7&r=0&o=7&pid=1.7&rm=3">
+<h3>Papel Higienico</h3><p>$12</p>
+<button onclick="agregar('Papel Higienico',12)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.ykrS3Oyu55GWzHEA4uCmEgHaHa?w=186&h=186&c=7&r=0&o=5&pid=1.7">
+<h3>Blumen Cherry</h3><p>$20</p>
+<button onclick="agregar('Blumen Cherry',20)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.ph104ofwyKtq9Up18Y9ifQHaHa?w=176&h=180&c=7&r=0&o=5&pid=1.7">
+<h3>Colgate</h3><p>$35</p>
+<button onclick="agregar('Colgate',35)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.CxQj4AzD0bwjEOOzj91RbQHaHa?w=191&h=191&c=7&r=0&o=5&pid=1.7">
+<h3>Blumen Neutro</h3><p>$25</p>
+<button onclick="agregar('Blumen Neutro',25)">Agregar</button>
+</div>
+
+<!-- LIMPIEZA -->
+<h2 id="limpieza">🧽 Limpieza</h2>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.NxL4Msizh_tHqgeOyziB0gHaHa?w=194&h=194&c=7&r=0&o=7&pid=1.7&rm=3">
+<h3>Fabuloso</h3><p>$40</p>
+<button onclick="agregar('Fabuloso',40)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.2GV9H_DGXfZTBMkR2tVKtgHaHa?w=213&h=213&c=7&r=0&o=7&pid=1.7&rm=3">
+<h3>Suavitel</h3><p>$70</p>
+<button onclick="agregar('Suavitel',70)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.9vhOn2EujATqKFMRL51KxwHaHa?w=186&h=186&c=7&r=0&o=5&pid=1.7">
+<h3>Ace</h3><p>$35</p>
+<button onclick="agregar('Ace',35)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://th.bing.com/th/id/OIP.QykN13Mm8DFD1dRLu5DGRgHaHl?w=190&h=193&c=7&r=0&o=5&pid=1.7">
+<h3>Pinol</h3><p>$25</p>
+<button onclick="agregar('Pinol',25)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://i5.walmartimages.com.mx/gr/images/product-images/img_large/00750043518358L.jpg">
+<h3>Salvo</h3><p>$80</p>
+<button onclick="agregar('Salvo',80)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://m.media-amazon.com/images/I/61GjR88vtyL._AC_SY300_SX300_QL70_ML2_.jpg">
+<h3>Ariel</h3><p>$150</p>
+<button onclick="agregar('Ariel',150)">Agregar</button>
+</div>
+
+<div class="producto">
+<img src="https://www.bing.com/th?id=OPHS.QYTPGDa9cl5nyA474C474&o=5&pid=21.1&w=128&h=188&qlt=100&dpr=1&o=2&bw=6&bc=FFFFFF">
+<h3>Cloralex</h3><p>$20</p>
+<button onclick="agregar('Cloralex',20)">Agregar</button>
+</div>
+
+<!-- CARRITO -->
+<div id="carrito">
+<h2>🛒 Carrito</h2>
+<ul id="lista"></ul>
+<p>Total: $<span id="total">0</span></p>
+
+<h3>💳 Método de pago</h3>
+<select id="pago">
+<option>Efectivo</option>
+<option>Tarjeta</option>
+<option>Transferencia</option>
+</select>
+
+<br><br>
+<button onclick="generarTicket()">Generar Ticket</button>
+
+<h3>🧾 Ticket</h3>
+<pre id="ticket"></pre>
+</div>
+
+</div>
+<div id="inventario">
+<h2>📦 Inventario</h2>
+
+<table border="1" width="100%">
+<tr>
+<th>Producto</th>
+<th>Existencia</th>
+</tr>
+
+<tbody id="tablaInventario"></tbody>
+
+</table>
+</div>
+<footer>
+<p>© 2026 Michi-Gan</p>
+</footer>
+<script>
+let total = 0;
+let listaProductos = [];
+
+let inventario = {
+"Mango":10,
+"Piña":10,
+"Manzana":10,
+"Fresas":10,
+"Sandia":10,
+"Platano":10,
+"Uvas":10,
+
+"Tomate":10,
+"Papa":10,
+"Cebolla":10,
+"Zanahoria":10,
+"Brócoli":10,
+"Lechuga":10,
+"Pepino":10,
+
+"Agua":10,
+"Leche Yaqui":10,
+"Jumex":10,
+"Coca Cola":10,
+"Monster Energy":10,
+"Power Ade":10,
+"Pepsi":10,
+
+"Sabritas":10,
+"Chokis":10,
+"Snickers":10,
+"Cheetos Xtra Flamin Hot":10,
+"Principe":10,
+"mym's":10,
+"Panditas":10,
+
+"Shampoo Herbal Essences":10,
+"Dove":10,
+"Acondiccionador Herbal Essences":10,
+"Papel Higienico":10,
+"Blumen Cherry":10,
+"Colgate":10,
+"Blumen Neutro":10,
+
+"Fabuloso":10,
+"Suavitel":10,
+"Ace":10,
+"Pinol":10,
+"Salvo":10,
+"Ariel":10,
+"Cloralex":10
+};
+
+function agregar(nombre, precio){
+
+    if(inventario[nombre] <= 0){
+        alert("Producto agotado");
+        return;
+    }
+
+    inventario[nombre]--;
+
+    listaProductos.push({nombre, precio});
+    total += precio;
+
+    let item = document.createElement("li");
+    item.textContent = nombre + " - $" + precio;
+
+    document.getElementById("lista").appendChild(item);
+    document.getElementById("total").textContent = total;
+
+    actualizarInventario();
+}
+
+function actualizarInventario(){
+
+    let html = "";
+
+    for(let producto in inventario){
+
+        if(inventario[producto] == 0){
+            html += `
+            <tr style="background:#ffb3b3">
+                <td>${producto}</td>
+                <td>AGOTADO</td>
+            </tr>`;
+        } else {
+            html += `
+            <tr>
+                <td>${producto}</td>
+                <td>${inventario[producto]}</td>
+            </tr>`;
+        }
+    }
+
+    document.getElementById("tablaInventario").innerHTML = html;
+}
+
+function generarTicket(){
+
+    let ticket = "Michi-Gan\n\n";
+
+    listaProductos.forEach(p => {
+        ticket += p.nombre + " - $" + p.precio + "\n";
+    });
+
+    ticket += "\n------------------";
+    ticket += "\nTotal: $" + total;
+    ticket += "\nPago: " + document.getElementById("pago").value;
+    ticket += "\nGracias por tu compra";
+
+    document.getElementById("ticket").textContent = ticket;
+}
+
+setTimeout(() => {
+    document.getElementById("inicio").style.display = "none";
+}, 2500);
+
+actualizarInventario();
+</script>
+
+</body>
+</html>
